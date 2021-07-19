@@ -1,0 +1,8 @@
+.lv-picker-view-class {
+	font-weight: 700;
+	color: #fff;
+}
+
+.lv-toolbar {
+	background-color: #2A2B38 !important;
+}

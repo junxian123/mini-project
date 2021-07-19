@@ -1,0 +1,12 @@
+<scroll-view 
+	class="container" style="height: {{scrollHeight}}rpx" 
+	scroll-y="{{scrollY}}" 
+	scroll-x="{{scrollX}}"
+	enhanced="{{enhanced}}"
+	show-scrollbar="{{showScrollbar}}" 
+	refresher-enabled="{{refresherEnabled}}"
+	refresher-triggered="{{refresherTriggered}}"
+	bindscrolltolower="handleScrollToLower"
+	bindrefresherrefresh="handleRefresherRefresh">
+	<slot></slot>
+</scroll-view>

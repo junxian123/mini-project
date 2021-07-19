@@ -1,0 +1,40 @@
+
+.toolbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 80rpx;
+}
+
+.title,
+.toolbar-button  {
+	display: flex;
+	align-items: center;
+}
+
+.toolbar-button {
+	padding: 0 32rpx;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+
+.picker-view-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.picker-view-indicator::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	border: none;
+}
+.picker-view-indicator::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	border: none;
+}

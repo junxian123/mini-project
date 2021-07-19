@@ -1,0 +1,44 @@
+
+<div class="container lv-class">
+	<view wx:if="{{showToolbar}}" class="toolbar lv-toolbar-class">
+		<view class="toolbar-button" style="color: {{cancelColor}}" bindtap="handleCancel">{{cancelButtonText}}</view>
+		<view class="title" style="color: {{titleColor}}">{{title}}</view>
+		<view class="toolbar-button" style="color: {{confirmColor}}" bindtap="handleConfirm">{{confirmButtonText}}</view>
+	</view>
+	<picker-view 
+		class="picker-view lv-picker-view-class"
+		style="height: {{height}}px"
+		indicator-style="height: {{itemHeight}}px;{{indicatorStyle}}"
+		indicator-class="{{!border ? 'picker-view-indicator' : ''}}"
+		mask-style="{{maskStyle}}"
+		value="{{valueList}}"
+		bindchange="handleChange">
+		<block>
+			<picker-view-column class="picker-view-column">
+				<view 
+					class="picker-view-item" 
+					wx:for="{{yearList}}" wx:key="item">{{item}}{{unit[0]}}</view>
+			</picker-view-column> 
+		</block>
+		<block wx:if="{{type === datetimePickerType.DATE || type === datetimePickerType.MONTH_YEAR}}">
+			<picker-view-column class="picker-view-column">
+				<view 
+					class="picker-view-item" 
+					wx:for="{{monthList}}" wx:key="item">{{item}}{{unit[1]}}</view>
+			</picker-view-column>
+		</block>
+		<block wx:if="{{type === datetimePickerType.DATE}}">
+			<picker-view-column class="picker-view-column">
+				<view 
+					class="picker-view-item" 
+					wx:for="{{dateList}}" wx:key="item">{{item}}{{unit[2]}}</view>
+			</picker-view-column>
+		</block>
+	</picker-view>
+</div>
+
+<template name="year">
+	<picker-view-column class="picker-view-column">
+		<view class="picker-view-item" wx:for="{{yearList}}" wx:key="item">{{item}}</view>
+	</picker-view-column> 
+</template>

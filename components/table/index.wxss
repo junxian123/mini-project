@@ -1,0 +1,40 @@
+
+.table-container--border {
+	border-top: 1rpx solid #ebeef5;
+	border-left: 1rpx solid #ebeef5;
+}
+
+.table-header {
+	position: relative;
+	display: inline-flex;
+	flex-direction: row;
+}
+
+.fixed {
+	position: absolute;
+}
+
+.th-left--fixed {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.tr {
+	display: inline-flex;
+	color: #333;
+}
+
+.td,
+.th {
+	text-align: center;
+	padding: 20rpx 10px;
+	box-sizing: border-box;
+}
+
+.td--border,
+.th--border {
+	border-right: 1rpx solid #ebeef5;
+	border-bottom: 1rpx solid #ebeef5
+}
+

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "lv-datetime-picker": "/components/datetime-picker/index",
+    "lv-table": "/components/table/index"
+  }
+}

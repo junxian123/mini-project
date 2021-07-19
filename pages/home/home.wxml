@@ -1,0 +1,26 @@
+<!-- <lv-datetime-picker lv-class="lv-class" border="{{false}}" value="{{value}}"
+visible-item-count="{{5}}" item-height="{{36}}" title="请选择年月日" bindconfirm="handleDateConfirm"></lv-datetime-picker>
+
+<lv-datetime-picker 
+	lv-class="lv-class" 
+	lv-toolbar-class="lv-toolbar" 
+	lv-picker-view-class="lv-picker-view-class" 
+	border="{{false}}" 
+	type="year" unit="{{['年']}}" 
+	mask-style="background: #2A2B38;z-index:0;" 
+	indicator-style="border-top: 1px solid #ccc;border-bottom: 1px solid #ccc"
+	cancel-color="#3963BC"
+	title-color="#fff"
+	visible-item-count="{{5}}" 
+	item-height="{{36}}" 
+	title="请选择年"
+	bindconfirm="handleConfirm">
+</lv-datetime-picker>
+
+<lv-datetime-picker lv-class="lv-class" border="{{false}}" type="month_year" date-format="YYYY-mm" bindchange="handleYearChange" unit="{{ ['年','月'] }}"
+visible-item-count="{{5}}" item-height="{{36}}" title="请选择年月" show-toolbar="{{false}}"></lv-datetime-picker> -->
+
+<view style="padding: 20rpx;">
+<lv-table table-columns="{{tableColumns}}" table-data="{{tableData}}" height="400" border fixed="left"></lv-table>
+
+</view>

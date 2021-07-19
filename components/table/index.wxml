@@ -1,0 +1,30 @@
+<scroll-view 
+	class="table-container {{border ? 'table-container--border' : ''}}"
+	scroll-x>
+	<view 
+		class="table-header lv-header-class"
+		style="width: {{scrollWidth}}rpx"
+		>
+
+		<block wx:for="{{tableColumns}}" wx:key="prop">
+			<view class="th {{border ? 'th--border' : ''}}"
+				style="width: {{item.width}}rpx">{{item.label}}</view>
+		</block>
+	</view>
+	<scroll-view 
+		class="table-body-wrapper"
+		style="width: {{scrollWidth}}rpx; height: {{height}}rpx"
+		scroll-y>
+		<view class="table-body">
+			<view class="tr" wx:for="{{tableData}}" wx:key="index" wx:for-item="row">
+				<view 
+					class="td {{border ? 'td--border' : ''}}" 
+					style="width: {{col.width}}rpx"
+					wx:for="{{tableColumns}}" 
+					wx:key="prop" 
+					wx:for-item="col">{{row[col.prop]}}</view>
+			</view>
+		</view>
+	</scroll-view>
+</scroll-view>
+
