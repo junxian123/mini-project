@@ -1,12 +1,5 @@
+@import '../../style//border.wxss';
 
-.table-container {
-	position: relative;
-}
-
-.table-container--border {
-	border-top: 1px solid #ebeef5;
-	border-left: 1px solid #ebeef5;
-}
 
 .table-header {
 	position: relative;
@@ -31,7 +24,6 @@
 
 
 .tr {
-	position: relative;
 	display: inline-flex;
 	flex-direction: row;
 }
@@ -43,11 +35,3 @@
 	box-sizing: border-box;
 	background-color: #fff;
 }
-
-.td--border,
-.th--border {
-	border-right: 1px solid #ebeef5;
-	border-bottom: 1px solid #ebeef5
-}
-
-

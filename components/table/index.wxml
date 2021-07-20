@@ -1,5 +1,6 @@
+    
 <scroll-view 
-	class="table-container {{border ? 'table-container--border' : ''}}"
+	class="table-container "
 	style="height: {{height}}rpx"
 	scroll-x
 	scroll-y>
@@ -9,20 +10,19 @@
 		>
 		<block wx:for="{{tableColumns}}" wx:key="prop">
 			<view 
-				class="th {{border ? 'th--border' : ''}} {{item.fixed === 'left' ? 'left--fixed' : ''}}"
+				class="th {{border ? 'border-bottom' : ''}} {{item.fixed === 'left' ? 'left--fixed' : ''}}"
 				style="width: {{item.width}}rpx; background-color: {{headerBgColor}}">{{item.label}}</view>
 		</block>
 	</view>
 	<view class="table-body">
 		<view class="tr" style="width: {{scrollWidth}}rpx; " wx:for="{{tableData}}" wx:key="index" wx:for-item="row" >
 			<view 
-				class="td {{border ? 'td--border' : ''}} {{col.fixed === 'left' ? 'left--fixed' : ''}}" 
+				class="td {{border ? 'border-bottom' : ''}} {{col.fixed === 'left' ? 'left--fixed' : ''}}" 
 				style="width: {{col.width}}rpx;background-color: {{index % 2 ? oddBgColor : evenBgColor}}"
 				wx:for="{{tableColumns}}" 
 				wx:key="prop" 
 				wx:for-item="col">{{row[col.prop]}}</view>
 		</view>
 	</view>
+
 </scroll-view>
-
-
