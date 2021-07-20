@@ -21,6 +21,6 @@ visible-item-count="{{5}}" item-height="{{36}}" title="请选择年月日" bindc
 visible-item-count="{{5}}" item-height="{{36}}" title="请选择年月" show-toolbar="{{false}}"></lv-datetime-picker> -->
 
 <view style="padding: 20rpx;">
-<lv-table table-columns="{{tableColumns}}" table-data="{{tableData}}" height="400" border fixed="left"></lv-table>
+<lv-table table-columns="{{tableColumns}}" table-data="{{tableData}}"></lv-table>
 
 </view>

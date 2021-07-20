@@ -12,7 +12,8 @@ Page({
 		tableColumns: [{
 			prop: 'company',
 			label: '公司',
-			width: 200
+			width: 200,
+			fixed: 'left'
 		}, {
 			prop: 'lastMonth',
 			label: '上月余额',
@@ -61,7 +62,12 @@ Page({
 			yearProfit: 888
 		}]
 		this.setData({
-			tableData: [...tableData, ...tableData,...tableData]
+			tableData: [...tableData, ...tableData,...tableData, ...tableData, ...tableData, 
+				...tableData, ...tableData, ...tableData, ...tableData, ...tableData, ...tableData, 
+				...tableData, ...tableData, ...tableData,
+				...tableData, ...tableData, ...tableData,
+				...tableData, ...tableData, ...tableData,
+				...tableData, ...tableData, ...tableData]
 		})
 	},
 

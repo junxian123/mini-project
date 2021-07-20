@@ -4,16 +4,16 @@ Component({
 	properties: {
 		tableColumns: Array,
 		tableData: Array,
-		fixed: {
-			type: Boolean,
-			optionalTypes: [String]
-		},
+		leftFixedColumn: Object,
 		border: Boolean,
 		height: {
 			type: Number,
 			optionalTypes: [String],
 			value: 'auto'
-		}
+		},
+		oddBgColor: String,
+		evenBgColor: String,
+		headerBgColor: String
 	},
 
 	observers: {

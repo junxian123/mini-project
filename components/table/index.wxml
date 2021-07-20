@@ -1,30 +1,28 @@
 <scroll-view 
 	class="table-container {{border ? 'table-container--border' : ''}}"
-	scroll-x>
+	style="height: {{height}}rpx"
+	scroll-x
+	scroll-y>
 	<view 
-		class="table-header lv-header-class"
+		class="table-header lv-header-class {{height ? 'table-header--fix' : ''}}"
 		style="width: {{scrollWidth}}rpx"
 		>
-
 		<block wx:for="{{tableColumns}}" wx:key="prop">
-			<view class="th {{border ? 'th--border' : ''}}"
-				style="width: {{item.width}}rpx">{{item.label}}</view>
+			<view 
+				class="th {{border ? 'th--border' : ''}} {{item.fixed === 'left' ? 'left--fixed' : ''}}"
+				style="width: {{item.width}}rpx; background-color: {{headerBgColor}}">{{item.label}}</view>
 		</block>
 	</view>
-	<scroll-view 
-		class="table-body-wrapper"
-		style="width: {{scrollWidth}}rpx; height: {{height}}rpx"
-		scroll-y>
-		<view class="table-body">
-			<view class="tr" wx:for="{{tableData}}" wx:key="index" wx:for-item="row">
-				<view 
-					class="td {{border ? 'td--border' : ''}}" 
-					style="width: {{col.width}}rpx"
-					wx:for="{{tableColumns}}" 
-					wx:key="prop" 
-					wx:for-item="col">{{row[col.prop]}}</view>
-			</view>
+	<view class="table-body">
+		<view class="tr" style="width: {{scrollWidth}}rpx; " wx:for="{{tableData}}" wx:key="index" wx:for-item="row" >
+			<view 
+				class="td {{border ? 'td--border' : ''}} {{col.fixed === 'left' ? 'left--fixed' : ''}}" 
+				style="width: {{col.width}}rpx;background-color: {{index % 2 ? oddBgColor : evenBgColor}}"
+				wx:for="{{tableColumns}}" 
+				wx:key="prop" 
+				wx:for-item="col">{{row[col.prop]}}</view>
 		</view>
-	</scroll-view>
+	</view>
 </scroll-view>
+
 
